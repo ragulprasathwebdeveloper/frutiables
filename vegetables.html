@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/167289cbb0.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        .navbar-nav {
+      flex-grow: 1;
+      /* justify-content: space-between; */
+    }
+
+    .navbar-nav .nav-item .nav-link:hover {
+      color: green;
+      /* margin-left: auto; */
+    }
+
+    .icon-link {
+      color: #28a745;
+      font-size: 20px;
+      margin-left: 15px;
+    }
+
+    .icon-link:hover {
+      color: #218838;
+    }
+
+    #types {
+      border: 1px solid orange;
+    }
+
+    #types:hover {
+      /* color: white; */
+      background-color: orange;
+    }
+
+    .img-container {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card-img-top {
+      transition: transform 0.5s ease;
+      width: 100%;
+    }
+
+    .img-container:hover .card-img-top {
+      transform: scale(1.1);
+      /* box-shadow: opx 8px 4px black; */
+    }
+
+    .boxshadow {
+      transition: box-shadow 0.5s ease;
+    }
+
+    .boxshadow:hover {
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .cart{
+      color: #81c408;
+    }
+
+    .cart:hover{
+      background-color: orange;
+      color: white;
+    }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-nav navbar-expand-lg bg-white sticky-top"
+    style="border-bottom: 1px solid rgb(170, 167, 167);">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#" style="font-weight: 800; color:#81c408;">
+        <h1>Fruitables</h1>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+        style="border-color: green;">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link" style="color: green;" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Shop Details</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Pages
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="vegetables.html">Vegetables</a></li>
+              <li><a class="dropdown-item" href="fruits.html">Fruits</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-disabled="true">Contact</a>
+          </li>
+        </ul>
+        <div class="d-flex">
+          <a href="#login" class="icon-link text-decoration-none"><i class="fa-solid fa-user text-success"></i></a>
+          <a href="#cart" class="icon-link text-decoration-none ms-4"><i class="fa-solid fa-bag-shopping text-success"></i></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item ms-2 mt-2"><a href="index.html" class="nav-link">Home</a></li>
+      <li class="breadcrumb-item mt-2"><a href="fruits.html" style="color: black; text-decoration: none;">Fruits</a></li>
+      <li class="breadcrumb-item mt-2" aria-current="page" style="color: green;">Vegetables</li>
+    </ol>
+  </nav>
+
+
+  <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; margin-top: 2%;">
+
+    <div class="card ms-3 mb-5 boxshadow col-lg-6 col-md-4 col-sm-12" style="width: 18rem; overflow: hidden;">
+      <div class="img-container position-relative">
+        <img src="img/vegetable-item-1.jpg" class="card-img-top" alt="...">
+      </div>
+      <div class="text-white px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px; background-color: orange;">Vegetables</div>
+      <div class="card-body">
+        <h1 class="card-title" style="color: rgb(107, 101, 101);">Parsley</h1>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+          card's content.</p>
+          <div class="d-flex justify-content-between flex-lg-wrap">
+            <p class="fs-5 mb-0" style="color: rgb(58, 55, 55);">$4.99 / kg</p>
+            <a href="#" class="btn border border-warning rounded-pill px-3 fw-bold cart"><i class="fa fa-shopping-bag me-2" style="color: #81c408;"></i> Add to cart</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="card ms-3 mb-5 boxshadow col-lg-6 col-md-4 col-sm-12" style="width: 18rem; overflow: hidden;">
+      <div class="img-container position-relative">
+        <img src="img/vegetable-item-2.jpg" class="card-img-top" alt="..." height="229px">
+      </div>
+      <div class="text-white px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px; background-color: orange;">Vegetables</div>
+      <div class="card-body">
+        <h1 class="card-title" style="color: rgb(107, 101, 101);">Parsely</h1>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+          card's content.</p>
+          <div class="d-flex justify-content-between flex-lg-wrap">
+            <p class="fs-5 mb-0" style="color: rgb(58, 55, 55);">$4.99 / kg</p>
+            <a href="#" class="btn border border-warning rounded-pill px-3 fw-bold cart"><i class="fa fa-shopping-bag me-2" style="color: #81c408;"></i> Add to cart</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card ms-3 mb-5 boxshadow col-lg-6 col-md-4 col-sm-12" style="width: 18rem; overflow: hidden;">
+      <div class="img-container position-relative">
+        <img src="img/vegetable-item-5.jpg" class="card-img-top" alt="...">
+      </div>
+      <div class="text-white px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;background-color: orange;">Vegetables</div>
+      <div class="card-body">
+        <h1 class="card-title" style="color: rgb(107, 101, 101);">Potatoes</h1>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+          card's content.</p>
+          <div class="d-flex justify-content-between flex-lg-wrap">
+            <p class="fs-5 mb-0" style="color: rgb(58, 55, 55);">$4.99 / kg</p>
+            <a href="#" class="btn border border-warning rounded-pill px-3 fw-bold cart"><i class="fa fa-shopping-bag me-2" style="color: #81c408;"></i> Add to cart</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="card ms-3 mb-5 boxshadow col-lg-6 col-md-4 col-sm-12" style="width: 18rem; overflow: hidden;">
+      <div class="img-container position-relative">
+        <img src="img/vegetable-item-6.jpg" class="card-img-top" alt="...">
+      </div>
+      <div class="text-white px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;background-color: orange;">Vegetables</div>
+      <div class="card-body">
+        <h1 class="card-title" style="color: rgb(107, 101, 101);">Leaves</h1>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+          card's content.</p>
+          <div class="d-flex justify-content-between flex-lg-wrap">
+            <p class="fs-5 mb-0" style="color: rgb(58, 55, 55);">$4.99 / kg</p>
+            <a href="#" class="btn border border-warning rounded-pill px-3 fw-bold cart"><i class="fa fa-shopping-bag me-2" style="color: #81c408;"></i> Add to cart</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="card ms-3 mb-5 boxshadow col-lg-6 col-md-4 col-sm-12" style="width: 18rem; overflow: hidden;">
+      <div class="img-container position-relative">
+        <img src="img/vegetable-item-2.jpg" class="card-img-top" alt="..." height="226px">
+      </div>
+      <div class="text-white px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px; background-color: orange;">Vegetables</div>
+      <div class="card-body">
+        <h1 class="card-title" style="color: rgb(107, 101, 101);">Grapes</h1>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+          card's content.</p>
+          <div class="d-flex justify-content-between flex-lg-wrap">
+            <p class="fs-5 mb-0" style="color: rgb(58, 55, 55);">$4.99 / kg</p>
+            <a href="#" class="btn border border-warning rounded-pill px-3 fw-bold cart"><i class="fa fa-shopping-bag me-2" style="color: #81c408;"></i> Add to cart</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="card ms-3 mb-5 boxshadow col-lg-6 col-md-4 col-sm-12" style="width: 18rem; overflow: hidden;">
+      <div class="img-container position-relative">
+        <img src="img/vegetable-item-1.jpg" class="card-img-top" alt="...">
+      </div>
+      <div class="text-white px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px; background-color: orange;">Vegetables</div>
+      <div class="card-body">
+        <h1 class="card-title" style="color: rgb(107, 101, 101);">Parsely</h1>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+          card's content.</p>
+          <div class="d-flex justify-content-between flex-lg-wrap">
+            <p class="fs-5 mb-0" style="color: rgb(58, 55, 55);">$4.99 / kg</p>
+            <a href="#" class="btn border border-warning rounded-pill px-3 fw-bold cart"><i class="fa fa-shopping-bag me-2" style="color: #81c408;"></i> Add to cart</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="card ms-3 mb-5 boxshadow col-lg-6 col-md-4 col-sm-12" style="width: 18rem; overflow: hidden;">
+      <div class="img-container position-relative">
+        <img src="img/vegetable-item-4.jpg" class="card-img-top" alt="...">
+      </div>
+      <div class="text-white px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px; background-color: orange;">Vegetables</div>
+      <div class="card-body">
+        <h1 class="card-title" style="color: rgb(107, 101, 101);">Tomato</h1>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+          card's content.</p>
+          <div class="d-flex justify-content-between flex-lg-wrap">
+            <p class="fs-5 mb-0" style="color: rgb(58, 55, 55);">$4.99 / kg</p>
+            <a href="#" class="btn border border-warning rounded-pill px-3 fw-bold cart"><i class="fa fa-shopping-bag me-2" style="color: #81c408;"></i> Add to cart</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card ms-3 mb-5 boxshadow col-lg-6 col-md-4 col-sm-12" style="width: 18rem; overflow: hidden;">
+      <div class="img-container position-relative">
+        <img src="img/vegetable-item-5.jpg" class="card-img-top" alt="...">
+      </div>
+      <div class="text-white px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;background-color: orange;">Vegetables</div>
+      <div class="card-body">
+        <h1 class="card-title" style="color: rgb(107, 101, 101);">Potatoes</h1>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+          card's content.</p>
+          <div class="d-flex justify-content-between flex-lg-wrap">
+            <p class="fs-5 mb-0" style="color: rgb(58, 55, 55);">$4.99 / kg</p>
+            <a href="#" class="btn border border-warning rounded-pill px-3 fw-bold cart"><i class="fa fa-shopping-bag me-2" style="color: #81c408;"></i> Add to cart</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="card ms-3 mb-5 boxshadow col-lg-6 col-md-4 col-sm-12" style="width: 18rem; overflow: hidden;">
+      <div class="img-container position-relative">
+        <img src="img/vegetable-item-6.jpg" class="card-img-top" alt="...">
+      </div>
+      <div class="text-white px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;background-color: orange;">Vegetables</div>
+      <div class="card-body">
+        <h1 class="card-title" style="color: rgb(107, 101, 101);">Leaves</h1>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+          card's content.</p>
+          <div class="d-flex justify-content-between flex-lg-wrap">
+            <p class="fs-5 mb-0" style="color: rgb(58, 55, 55);">$4.99 / kg</p>
+            <a href="#" class="btn border border-warning rounded-pill px-3 fw-bold cart"><i class="fa fa-shopping-bag me-2" style="color: #81c408;"></i> Add to cart</a>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+
+
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fruitables</title>
+  <script src="https://kit.fontawesome.com/167289cbb0.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+    /* *{
+      margin: 0;
+      padding: 0;
+    } */
+
+    .navbar-nav {
+      flex-grow: 1;
+      /* justify-content: space-between; */
+    }
+
+    .navbar-nav .nav-item .nav-link:hover {
+      color: green;
+      /* margin-left: auto; */
+    }
+
+    .icon-link {
+      color: #28a745;
+      font-size: 20px;
+      margin-left: 15px;
+    }
+
+    .icon-link:hover {
+      color: #218838;
+    }
+
+    .bg-image {
+      background-image: url('img/hero-img.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 400px;
+      width: 100%;
+      /* border-bottom: 2px solid green; */
+    }
+
+    #para {
+      word-spacing: 2px;
+      letter-spacing: 1px;
+      font-weight: bolder;
+      font-stretch: wider;
+      font-size: 50px;
+    }
+
+    #types {
+      border: 1px solid orange;
+    }
+
+    #types:hover {
+      /* color: white; */
+      background-color: orange;
+    }
+
+    .img-container {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card-img-top {
+      transition: transform 0.5s ease;
+      width: 100%;
+    }
+
+    .img-container:hover .card-img-top {
+      transform: scale(1.1);
+      /* box-shadow: opx 8px 4px black; */
+    }
+
+    .boxshadow {
+      transition: box-shadow 0.5s ease;
+    }
+
+    .boxshadow:hover {
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .cart{
+      color: #81c408;
+    }
+
+    .cart:hover{
+      background-color: orange;
+      color: white;
+    }
+
+    .service .service-item .service-content {
+    position: relative;
+    width: 200px; 
+    height: 130px; 
+    top: -50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+}
+
+
+  /* Styling for Carousel Control Buttons */
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: orange; /* Semi-transparent background */
+    border-radius: 50%; /* Rounded buttons */
+    padding: 20px; /* Add some padding */
+  }
+
+  /* Optional: Styling the hover effect for the buttons */
+  .carousel-control-prev-icon:hover,
+  .carousel-control-next-icon:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker on hover */
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 5%; /* Adjust the width of the control area */
+  }
+
+  .carousel-control-prev-icon::before,
+  .carousel-control-next-icon::before {
+    font-size: 1.5rem; /* Increase the size of the arrow icon */
+  }
+
+  body{
+    width: 100%;
+    margin: 0; /* Optional: Remove any default margins */
+    padding: 0; /* Optional: Remove any default padding */
+}
+
+
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container-fluid mt-2">
+    <div class="container bg-success d-none d-lg-block py-2"
+      style="border-bottom-left-radius: 36px; border-top-right-radius: 36px;">
+      <div class="d-flex justify-content-between">
+        <div class="top-info ps-2">
+          <small class="me-3"><i class="fas fa-map-marker-alt me-2 text-warning"></i> <a href="#"
+              class="text-white text-decoration-none">123 Street, New York</a></small>
+          <small class="me-3"><i class="fas fa-envelope me-2 text-warning"></i><a href="#"
+              class="text-white text-decoration-none">Email@Example.com</a></small>
+        </div>
+        <div class="top-link pe-2">
+          <a href="#" class="text-white text-decoration-none"><small class="text-white mx-2">Privacy Policy</small>/</a>
+          <a href="#" class="text-white text-decoration-none"><small class="text-white mx-2">Terms of Use</small>/</a>
+          <a href="#" class="text-white text-decoration-none"><small class="text-white ms-2">Sales and
+              Refunds</small></a>
+        </div>
+      </div>
+    </div>
+
+
+    <nav class="navbar navbar-nav navbar-expand-lg bg-white sticky-top"
+      style="border-bottom: 1px solid rgb(170, 167, 167);">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#" style="font-weight: 800; color:#81c408;">
+          <h1>Fruitables</h1>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+          style="border-color: green;">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link" style="color: green;" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Shop Details</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Pages
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="vegetables.html">Vegetables</a></li>
+                <li><a class="dropdown-item" href="fruits.html">Fruits</a></li>
+                <li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-disabled="true">Contact</a>
+            </li>
+          </ul>
+          <div class="d-flex">
+            <a href="login.html" class="icon-link text-decoration-none"><i class="fa-solid fa-user"></i></a>
+            <a href="#cart" class="icon-link text-decoration-none"><i class="fa-solid fa-bag-shopping"></i></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- <img src="img/hero-img.jpg" alt="" class="img-fluid w-100" style="height: 260px;"> -->
+    <div class="container-fluid bg-image hero-header mt-5">
+      <div class="row">
+        <!-- Text and Searchbar Section -->
+        <div class="col-md-12 col-lg-7 container">
+          <p class="text-warning" style="font-size: 20px; margin-top: 14%;">100% Organic Foods</p>
+          <h1 style="color: #81c408; font-weight: bolder;" id="para">Organic Veggies & <br> Fruits Foods</h1>
+          <!-- Searchbar -->
+          <div class="mt-3 col-md-12 col-lg-12 col-12 col-sm-12">
+            <div class="position-relative mx-auto">
+              <input class="form-control border-2 border-warning w-75 py-2 px-4 rounded-pill" type="number"
+                placeholder="Search">
+              <button type="submit"
+                class="btn btn-success border-2 border-warning py-1 px-4 position-absolute rounded-pill text-white h-100"
+                style="top: 0; right: 25%;">Submit</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel Section -->
+        <div class="col-md-12 col-lg-4 container" style="margin-top: 10%;">
+          <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active rounded">
+                <img src="img/hero-img-1.png" class="img-fluid w-100 h-100 bg-warning rounded" alt="First slide">
+                <!-- <a href="#" class="btn px-3 py-2 text-dark rounded">Fruites</a> -->
+              </div>
+              <div class="carousel-item rounded">
+                <img src="img/hero-img-2.jpg" class="img-fluid w-100 h-100 rounded" alt="Second slide">
+                <!-- <a href="#" class="btn px-4 py-2 text-white rounded">Vesitables</a> -->
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev" style="margin-left: 6%;">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next" style="margin-right: 6%;">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div> <br><br><br>
+
+    <div class="container-fluid py-5">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-md-6 col-lg-3 mt-1">
+            <div class="text-center rounded bg-light p-4">
+              <div class="btn-square bg-warning mb-5 mx-auto py-5 px-5"
+                style="border-bottom-left-radius: 50px; border-bottom-right-radius: 50px;">
+                <i class="fas fa-car-side fa-3x text-white"></i>
+              </div>
+              <div class="text-center">
+                <h5>Free Shipping</h5>
+                <p class="mb-0">Free on order over $300</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 mt-1">
+            <div class="text-center rounded bg-light p-4">
+              <div class="btn-square bg-warning mb-5 mx-auto py-5 px-5"
+                style="border-bottom-left-radius: 50px; border-bottom-right-radius: 50px;">
+                <i class="fas fa-user-shield fa-3x text-white"></i>
+              </div>
+              <div class="text-center">
+                <h5>Security Payment</h5>
+                <p class="mb-0">100% security payment</p><br>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 mt-1">
+            <div class="text-center rounded bg-light p-4">
+              <div class="btn-square bg-warning mb-5 mx-auto py-5 px-5"
+                style="border-bottom-left-radius: 50px; border-bottom-right-radius: 50px;">
+                <i class="fas fa-exchange-alt fa-3x text-white"></i>
+              </div>
+              <div class="text-center">
+                <h5>30 Day Return</h5>
+                <p class="mb-0">30 day money guarantee</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 mt-1">
+            <div class="text-center rounded bg-light p-4">
+              <div class="btn-square bg-warning mb-5 mx-auto px-5 py-5"
+                style="border-bottom-left-radius: 50px; border-bottom-right-radius: 50px;">
+                <i class="fa fa-phone-alt fa-3x text-white"></i>
+              </div>
+              <div class="text-center">
+                <h5>24/7 Support</h5>
+                <p class="mb-0">Support every time fast</p><br>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container-fluid">
+      <div class="container">
+        <div class="tab-class text-center">
+          <div class="row">
+            <div class="col-lg-4 col-md-12 col-sm-12 text-start">
+              <h1>Our Organic Products</h1>
+            </div>
+            <div class="col-lg-8 text-end">
+              <ul class="nav nav-pills d-inline-flex text-center mb-5">
+                <li class="nav-item">
+                  <a class="d-flex m-2 py-2 rounded-pill active text-decoration-none" data-bs-toggle="pill"
+                    href="#tab-1" id="types">
+                    <span class="text-dark" style="width: 130px;">All Products</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="d-flex py-2 m-2 rounded-pill text-decoration-none" data-bs-toggle="pill" href="#tab-2"
+                    id="types">
+                    <span class="text-dark" style="width: 130px;">Vegetables</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="d-flex m-2 py-2 rounded-pill text-decoration-none" data-bs-toggle="pill" href="#tab-3"
+                    id="types">
+                    <span class="text-dark" style="width: 130px;">Fruits</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- content goes here -->
+
+          <div style="display: flex; flex-wrap: wrap;">
+
+            <div class="card ms-3 mb-5 boxshadow col-lg-6 col-md-4 col-sm-12" style="width: 18rem; overflow: hidden;">
+              <div class="img-container position-relative">
+                <img src="img/fruite-item-5.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="text-white px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px; background-color: orange;">Fruits</div>
+              <div class="card-body">
+                <h1 class="card-title" style="color: rgb(107, 101, 101);">Grapes</h1>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                  <div class="d-flex justify-content-between flex-lg-wrap">
+                    <p class="fs-5 mb-0" style="color: rgb(58, 55, 55);">$4.99 / kg</p>
+                    <a href="#" class="btn border border-warning rounded-pill px-3 fw-bold cart"><i class="fa fa-shopping-bag me-2" style="color: #81c408;"></i> Add to cart</a>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="card ms-3 mb-5 boxshadow col-lg-6 col-md-4 col-sm-12" style="width: 18rem; overflow: hidden;">
+              <div class="img-container position-relative">
+                <img src="img/fruite-item-4.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="text-white px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px; background-color: orange;">Fruits</div>
+              <div class="card-body">
+                <h1 class="card-title" style="color: rgb(107, 101, 101);">Apricots</h1>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                  <div class="d-flex justify-content-between flex-lg-wrap">
+                    <p class="fs-5 mb-0" style="color: rgb(58, 55, 55);">$4.99 / kg</p>
+                    <a href="#" class="btn border border-warning rounded-pill px-3 fw-bold cart"><i class="fa fa-shopping-bag me-2" style="color: #81c408;"></i> Add to cart</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="card ms-3 mb-5 boxshadow col-lg-6 col-md-4 col-sm-12" style="width: 18rem; overflow: hidden;">
+              <div class="img-container position-relative">
+                <img src="img/fruite-item-3.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="text-white px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;background-color: orange;">Fruits</div>
+              <div class="card-body">
+                <h1 class="card-title" style="color: rgb(107, 101, 101);">Banana</h1>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                  <div class="d-flex justify-content-between flex-lg-wrap">
+                    <p class="fs-5 mb-0" style="color: rgb(58, 55, 55);">$4.99 / kg</p>
+                    <a href="#" class="btn border border-warning rounded-pill px-3 fw-bold cart"><i class="fa fa-shopping-bag me-2" style="color: #81c408;"></i> Add to cart</a>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="card ms-3 mb-5 boxshadow col-lg-6 col-md-4 col-sm-12" style="width: 18rem; overflow: hidden;">
+              <div class="img-container position-relative">
+                <img src="img/fruite-item-2.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="text-white px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;background-color: orange;">Fruits</div>
+              <div class="card-body">
+                <h1 class="card-title" style="color: rgb(107, 101, 101);">Raspberries</h1>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                  <div class="d-flex justify-content-between flex-lg-wrap">
+                    <p class="fs-5 mb-0" style="color: rgb(58, 55, 55);">$4.99 / kg</p>
+                    <a href="#" class="btn border border-warning rounded-pill px-3 fw-bold cart"><i class="fa fa-shopping-bag me-2" style="color: #81c408;"></i> Add to cart</a>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="card ms-3 mb-5 boxshadow col-lg-6 col-md-4 col-sm-12" style="width: 18rem; overflow: hidden;">
+              <div class="img-container position-relative">
+                <img src="img/fruite-item-5.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="text-white px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px; background-color: orange;">Fruits</div>
+              <div class="card-body">
+                <h1 class="card-title" style="color: rgb(107, 101, 101);">Grapes</h1>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                  <div class="d-flex justify-content-between flex-lg-wrap">
+                    <p class="fs-5 mb-0" style="color: rgb(58, 55, 55);">$4.99 / kg</p>
+                    <a href="#" class="btn border border-warning rounded-pill px-3 fw-bold cart"><i class="fa fa-shopping-bag me-2" style="color: #81c408;"></i> Add to cart</a>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="card ms-3 mb-5 boxshadow col-lg-6 col-md-4 col-sm-12" style="width: 18rem; overflow: hidden;">
+              <div class="img-container position-relative">
+                <img src="img/fruite-item-3.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="text-white px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px; background-color: orange;">Fruits</div>
+              <div class="card-body">
+                <h1 class="card-title" style="color: rgb(107, 101, 101);">Banana</h1>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                  <div class="d-flex justify-content-between flex-lg-wrap">
+                    <p class="fs-5 mb-0" style="color: rgb(58, 55, 55);">$4.99 / kg</p>
+                    <a href="#" class="btn border border-warning rounded-pill px-3 fw-bold cart"><i class="fa fa-shopping-bag me-2" style="color: #81c408;"></i> Add to cart</a>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="card ms-3 mb-5 boxshadow col-lg-6 col-md-4 col-sm-12" style="width: 18rem; overflow: hidden;">
+              <div class="img-container position-relative">
+                <img src="img/fruite-item-1.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="text-white px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px; background-color: orange;">Fruits</div>
+              <div class="card-body">
+                <h1 class="card-title" style="color: rgb(107, 101, 101);">Oranges</h1>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                  <div class="d-flex justify-content-between flex-lg-wrap">
+                    <p class="fs-5 mb-0" style="color: rgb(58, 55, 55);">$4.99 / kg</p>
+                    <a href="#" class="btn border border-warning rounded-pill px-3 fw-bold cart"><i class="fa fa-shopping-bag me-2" style="color: #81c408;"></i> Add to cart</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="card ms-3 mb-5 boxshadow col-lg-6 col-md-4 col-sm-12" style="width: 18rem; overflow: hidden;">
+              <div class="img-container position-relative">
+                <img src="img/fruite-item-2.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="text-white px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;background-color: orange;">Fruits</div>
+              <div class="card-body">
+                <h1 class="card-title" style="color: rgb(107, 101, 101);">Raspberries</h1>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                  <div class="d-flex justify-content-between flex-lg-wrap">
+                    <p class="fs-5 mb-0" style="color: rgb(58, 55, 55);">$4.99 / kg</p>
+                    <a href="#" class="btn border border-warning rounded-pill px-3 fw-bold cart"><i class="fa fa-shopping-bag me-2" style="color: #81c408;"></i> Add to cart</a>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="card ms-3 mb-5 boxshadow col-lg-6 col-md-4 col-sm-12" style="width: 18rem; overflow: hidden;">
+              <div class="img-container position-relative">
+                <img src="img/fruite-item-4.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="text-white px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;background-color: orange;">Fruits</div>
+              <div class="card-body">
+                <h1 class="card-title" style="color: rgb(107, 101, 101);">Apricots</h1>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                  <div class="d-flex justify-content-between flex-lg-wrap">
+                    <p class="fs-5 mb-0" style="color: rgb(58, 55, 55);">$4.99 / kg</p>
+                    <a href="#" class="btn border border-warning rounded-pill px-3 fw-bold cart"><i class="fa fa-shopping-bag me-2" style="color: #81c408;"></i> Add to cart</a>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+
+          <div class="container-fluid service py-5">
+            <div class="container">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-6 col-lg-4">
+                        <a href="#" class="text-decoration-none">
+                            <div class="service-item bg-danger rounded border border-danger">
+                                <img src="img/featur-1.jpg" class="img-fluid rounded-top w-100" alt="">
+                                <div class="px-4 rounded-bottom">
+                                    <div class="service-content bg-success text-center pt-4 rounded">
+                                        <h5 class="text-white">Fresh Apples</h5>
+                                        <h3 class="mb-0 text-dark">20% OFF</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <a href="#" class="text-decoration-none">
+                            <div class="service-item bg-dark rounded border border-dark">
+                                <img src="img/featur-2.jpg" class="img-fluid rounded-top w-100" alt="">
+                                <div class="px-4 rounded-bottom">
+                                    <div class="service-content bg-light text-center p-4 rounded">
+                                        <h5 class="text-primary">Tasty Fruits</h5>
+                                        <h3 class="mb-0">Free delivery</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <a href="#" class="text-decoration-none">
+                            <div class="service-item bg-primary rounded border border-primary">
+                                <img src="img/featur-3.jpg" class="img-fluid rounded-top w-100" alt="">
+                                <div class="px-4 rounded-bottom">
+                                    <div class="service-content bg-warning text-center p-4 rounded">
+                                        <h5 class="text-white">Exotic Vegitable</h5>
+                                        <h3 class="mb-0 text-dark">Discount 30$</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>  <br><br>
+
+<!-- Carousel img sliding content -->
+ 
+<h1 style="text-align: left;">Vegetables</h1>
+
+<div class="col-md-12 col-lg-8 container w-100 position-relative" style="margin-top: 6%;">
+  <div id="carouselId1" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      
+      <!-- First Carousel Item with Multiple Cards -->
+      <div class="carousel-item active rounded">
+        <div class="row">
+          <!-- First Card -->
+          <div class="col-md-3">
+            <div class="card" style="width: 12rem;">
+              <img src="img/vegetable-item-6.jpg" class="card-img-top" alt="..." style="height: 152px;">
+              <div class="card-body">
+                <h5 class="card-title" style="color: rgb(58, 55, 55); text-align: left;">Parsley</h5>
+                <p class="card-text" style="text-align: left;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="fs-5 mb-0" style="color: rgb(58, 55, 55); text-align: left;">$4.99 / kg</p><br>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Second Card -->
+          <div class="col-md-3">
+            <div class="card" style="width: 12rem;">
+              <img src="img/vegetable-item-2.jpg" class="card-img-top" alt="..." style="height: 152px;">
+              <div class="card-body">
+                <h5 class="card-title" style="color: rgb(58, 55, 55); text-align: left;">Parsley</h5>
+                <p class="card-text" style="text-align: left;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="fs-5 mb-0" style="color: rgb(58, 55, 55); text-align: left;">$4.99 / kg</p><br>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Third Card -->
+          <div class="col-md-3">
+            <div class="card" style="width: 12rem;">
+              <img src="img/vegetable-item-5.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title" style="color: rgb(58, 55, 55); text-align: left;">Parsley</h5>
+                <p class="card-text" style="text-align: left;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="fs-5 mb-0" style="color: rgb(58, 55, 55); text-align: left;">$4.99 / kg</p><br>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fourth Card -->
+          <div class="col-md-3">
+            <div class="card" style="width: 12rem;">
+              <img src="img/vegetable-item-1.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title" style="color: rgb(58, 55, 55); text-align: left;">Parsley</h5>
+                <p class="card-text" style="text-align: left;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="fs-5 mb-0" style="color: rgb(58, 55, 55); text-align: left;">$4.99 / kg</p><br>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Second Carousel Item with Multiple Cards -->
+      <div class="carousel-item rounded">
+        <div class="row">
+          <!-- First Card -->
+          <div class="col-md-3">
+            <div class="card" style="width: 12rem;">
+              <img src="img/vegetable-item-4.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title" style="color: rgb(58, 55, 55); text-align: left;">Parsley</h5>
+                <p class="card-text" style="text-align: left;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="fs-5 mb-0" style="color: rgb(58, 55, 55); text-align: left;">$4.99 / kg</p><br>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Second Card -->
+          <div class="col-md-3">
+            <div class="card" style="width: 12rem;">
+              <img src="img/vegetable-item-3.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title" style="color: rgb(58, 55, 55); text-align: left;">Parsley</h5>
+                <p class="card-text" style="text-align: left;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="fs-5 mb-0" style="color: rgb(58, 55, 55); text-align: left;">$4.99 / kg</p><br>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Third Card -->
+          <div class="col-md-3">
+            <div class="card" style="width: 12rem;">
+              <img src="img/vegetable-item-2.jpg" class="card-img-top" alt="..." style="height: 152px;">
+              <div class="card-body">
+                <h5 class="card-title" style="color: rgb(58, 55, 55); text-align: left;">Parsley</h5>
+                <p class="card-text" style="text-align: left;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="fs-5 mb-0" style="color: rgb(58, 55, 55); text-align: left;">$4.99 / kg</p><br>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fourth Card -->
+          <div class="col-md-3">
+            <div class="card" style="width: 12rem;">
+              <img src="img/vegetable-item-5.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title" style="color: rgb(58, 55, 55); text-align: left;">Parsley</h5>
+                <p class="card-text" style="text-align: left;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="fs-5 mb-0" style="color: rgb(58, 55, 55); text-align: left;">$4.99 / kg</p><br>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>  
+        </div>
+      </div>
+
+    </div>
+    
+    <!-- Carousel Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselId1" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+      <!-- <img src="img/icons8-right-arrow-50.png" alt=""> -->
+    </button>
+    <button class="carousel-control-next position-absolute" type="button" data-bs-target="#carouselId1" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>  <br><br>
+
+
+<h1 style="text-align: left;">Fruits</h1>
+
+        <div class="col-md-12 col-lg-8 container w-100" style="margin-top: 6%;">
+          <div id="carouselId2" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              
+              <!-- First Carousel Item with Multiple Cards -->
+              <div class="carousel-item active rounded">
+                <div class="row">
+                  <!-- First Card -->
+                  <div class="col-md-3">
+                    <div class="card" style="width: 12rem;">
+                      <img src="img/fruite-item-1.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title" style="color: rgb(58, 55, 55); text-align: left;">Parsley</h5>
+                        <p class="card-text" style="text-align: left;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="fs-5 mb-0" style="color: rgb(58, 55, 55); text-align: left;">$4.99 / kg</p><br>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                      </div>
+                    </div>
+                  </div>
+        
+                  <!-- Second Card -->
+                  <div class="col-md-3">
+                    <div class="card" style="width: 12rem;">
+                      <img src="img/fruite-item-2.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title" style="color: rgb(58, 55, 55); text-align: left;">Parsley</h5>
+                        <p class="card-text" style="text-align: left;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="fs-5 mb-0" style="color: rgb(58, 55, 55); text-align: left;">$4.99 / kg</p><br>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                      </div>
+                    </div>
+                  </div>
+        
+                  <!-- Third Card -->
+                  <div class="col-md-3">
+                    <div class="card" style="width: 12rem;">
+                      <img src="img/fruite-item-3.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title" style="color: rgb(58, 55, 55); text-align: left;">Parsley</h5>
+                        <p class="card-text" style="text-align: left;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="fs-5 mb-0" style="color: rgb(58, 55, 55); text-align: left;">$4.99 / kg</p><br>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                      </div>
+                    </div>
+                  </div>
+        
+                  <!-- Fourth Card -->
+                  <div class="col-md-3">
+                    <div class="card" style="width: 12rem;">
+                      <img src="img/fruite-item-4.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title" style="color: rgb(58, 55, 55); text-align: left;">Parsley</h5>
+                        <p class="card-text" style="text-align: left;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="fs-5 mb-0" style="color: rgb(58, 55, 55); text-align: left;">$4.99 / kg</p><br>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Second Carousel Item with Multiple Cards -->
+              <div class="carousel-item rounded">
+                <div class="row">
+                  <!-- First Card -->
+                  <div class="col-md-3">
+                    <div class="card" style="width: 12rem;">
+                      <img src="img/fruite-item-5.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title" style="color: rgb(58, 55, 55); text-align: left;">Parsley</h5>
+                        <p class="card-text" style="text-align: left;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="fs-5 mb-0" style="color: rgb(58, 55, 55); text-align: left;">$4.99 / kg</p><br>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                      </div>
+                    </div>
+                  </div>
+        
+                  <!-- Second Card -->
+                  <div class="col-md-3">
+                    <div class="card" style="width: 12rem;">
+                      <img src="img/fruite-item-6.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title" style="color: rgb(58, 55, 55); text-align: left;">Parsley</h5>
+                        <p class="card-text" style="text-align: left;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="fs-5 mb-0" style="color: rgb(58, 55, 55); text-align: left;">$4.99 / kg</p><br>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                      </div>
+                    </div>
+                  </div>
+        
+                  <!-- Third Card -->
+                  <div class="col-md-3">
+                    <div class="card" style="width: 12rem;">
+                      <img src="img/fruite-item-1.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title" style="color: rgb(58, 55, 55); text-align: left;">Parsley</h5>
+                        <p class="card-text" style="text-align: left;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="fs-5 mb-0" style="color: rgb(58, 55, 55); text-align: left;">$4.99 / kg</p><br>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                      </div>
+                    </div>
+                  </div>
+        
+                  <!-- Fourth Card -->
+                  <div class="col-md-3">
+                    <div class="card" style="width: 12rem;">
+                      <img src="img/fruite-item-2.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title" style="color: rgb(58, 55, 55); text-align: left;">Parsley</h5>
+                        <p class="card-text" style="text-align: left;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="fs-5 mb-0" style="color: rgb(58, 55, 55); text-align: left;">$4.99 / kg</p><br>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                      </div>
+                    </div>
+                  </div>  
+                </div>
+              </div>
+        
+            </div>
+            
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselId2" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+              <!-- <img src="img/icons8-right-arrow-50.png" alt=""> -->
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselId2" data-bs-slide="next" style="margin-right: 2%;">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+
+            </div>
+        </div>
+
+
+<div>
+
+  <div class="container bg-warning my-5">
+    <div class="container py-5">
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="py-4" style="text-align: left;">
+                    <h1 class="display-3 fw-bold text-white">Fresh Exotic Fruits</h1>
+                    <p class="fw-normal display-3 text-dark mb-4">in Our Store</p>
+                    <p class="mb-4 text-dark">The generated Lorem Ipsum is therefore always free from repetition injected humour, or non-characteristic words etc.</p>
+                    <a href="#" class="banner-btn btn border-2 border-white rounded-pill text-dark py-3 px-5">BUY</a>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="position-relative">
+                    <img src="img/baner-1.png" class="img-fluid w-100 rounded" alt="">
+                    <div class="d-flex align-items-center justify-content-center bg-white rounded-circle position-absolute" style="width: 140px; height: 140px; top: 0; left: 0;">
+                        <h1 style="font-size: 100px;">1</h1>
+                        <div class="d-flex flex-column">
+                            <span class="h2 mb-0">50$</span>
+                            <span class="h4 text-muted mb-0">kg</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid py-5">
+  <div class="container py-5">
+      <div class="text-center mx-auto mb-5" style="max-width: 700px;">
+          <h1 class="display-4 fw-bold">Bestseller Products</h1>
+          <p class="fw-light">Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.</p>
+      </div>
+      <div class="row g-4">
+          <div class="col-lg-4 col-xl-4">
+              <div class="p-4 rounded bg-light">
+                  <div class="row align-items-center">
+                      <div class="col-6">
+                          <img src="img/best-product-1.jpg" class="img-fluid rounded-circle w-100" alt="">
+                      </div>
+                      <div class="col-6" style="text-align: left;">
+                          <a href="#" class="h5 nav-link">Organic Tomato</a>
+                          <div class="d-flex my-3">
+                              <i class="fas fa-star text-success"></i>
+                              <i class="fas fa-star text-success"></i>
+                              <i class="fas fa-star text-success"></i>
+                              <i class="fas fa-star text-success"></i>
+                              <i class="fas fa-star"></i>
+                          </div>
+                          <h4 class="mb-3">3.12 $</h4>
+                          <a href="#" class="btn border border-secondary rounded-pill text-success" style="font-size: 14px;"><i class="fa fa-shopping-bag me-2 text-success"></i> Add to cart</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-4 col-xl-4">
+              <div class="p-4 rounded bg-light">
+                  <div class="row align-items-center">
+                      <div class="col-6">
+                          <img src="img/best-product-2.jpg" class="img-fluid rounded-circle w-100" alt="">
+                      </div>
+                      <div class="col-6" style="text-align: left;">
+                          <a href="#" class="h5 nav-link">Organic Tomato</a>
+                          <div class="d-flex my-3">
+                              <i class="fas fa-star text-success"></i>
+                              <i class="fas fa-star text-success"></i>
+                              <i class="fas fa-star text-success"></i>
+                              <i class="fas fa-star text-success"></i>
+                              <i class="fas fa-star"></i>
+                          </div>
+                          <h4 class="mb-3">3.12 $</h4>
+                          <a href="#" class="btn border border-secondary rounded-pill px-3 text-success" style="font-size: 14px;"><i class="fa fa-shopping-bag me-2 text-success"></i> Add to cart</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-4 col-xl-4">
+              <div class="p-4 rounded bg-light">
+                  <div class="row align-items-center">
+                      <div class="col-6">
+                          <img src="img/best-product-3.jpg" class="img-fluid rounded-circle w-100" alt="">
+                      </div>
+                      <div class="col-6" style="text-align: left;">
+                          <a href="#" class="h5 nav-link">Organic Tomato</a>
+                          <div class="d-flex my-3">
+                              <i class="fas fa-star text-success"></i>
+                              <i class="fas fa-star text-success"></i>
+                              <i class="fas fa-star text-success"></i>
+                              <i class="fas fa-star text-success"></i>
+                              <i class="fas fa-star"></i>
+                          </div>
+                          <h4 class="mb-3">3.12 $</h4>
+                          <a href="#" class="btn border border-secondary rounded-pill px-3 text-success" style="font-size: 14px;"><i class="fa fa-shopping-bag me-2 text-success"></i> Add to cart</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-4 col-xl-4">
+              <div class="p-4 rounded bg-light">
+                  <div class="row align-items-center">
+                      <div class="col-6">
+                          <img src="img/best-product-4.jpg" class="img-fluid rounded-circle w-100" alt="">
+                      </div>
+                      <div class="col-6" style="text-align: left;">
+                          <a href="#" class="h5 nav-link">Organic Tomato</a>
+                          <div class="d-flex my-3">
+                              <i class="fas fa-star text-success"></i>
+                              <i class="fas fa-star text-success"></i>
+                              <i class="fas fa-star text-success"></i>
+                              <i class="fas fa-star text-success"></i>
+                              <i class="fas fa-star"></i>
+                          </div>
+                          <h4 class="mb-3">3.12 $</h4>
+                          <a href="#" class="btn border border-secondary rounded-pill px-3 text-success" style="font-size: 14px;"><i class="fa fa-shopping-bag me-2 text-success"></i> Add to cart</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-4 col-xl-4">
+              <div class="p-4 rounded bg-light">
+                  <div class="row align-items-center">
+                      <div class="col-6">
+                          <img src="img/best-product-5.jpg" class="img-fluid rounded-circle w-100" alt="">
+                      </div>
+                      <div class="col-6" style="text-align: left;">
+                          <a href="#" class="h5 nav-link">Organic Tomato</a>
+                          <div class="d-flex my-3">
+                              <i class="fas fa-star text-success"></i>
+                              <i class="fas fa-star text-success"></i>
+                              <i class="fas fa-star text-success"></i>
+                              <i class="fas fa-star text-success"></i>
+                              <i class="fas fa-star"></i>
+                          </div>
+                          <h4 class="mb-3">3.12 $</h4>
+                          <a href="#" class="btn border border-secondary rounded-pill px-3 text-success" style="font-size: 14px;"><i class="fa fa-shopping-bag me-2 text-success"></i> Add to cart</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-4 col-xl-4">
+              <div class="p-4 rounded bg-light">
+                  <div class="row align-items-center">
+                      <div class="col-6">
+                          <img src="img/best-product-6.jpg" class="img-fluid rounded-circle w-100" alt="">
+                      </div>
+                      <div class="col-6" style="text-align: left;">
+                          <a href="#" class="h5 nav-link">Organic Tomato</a>
+                          <div class="d-flex my-3">
+                              <i class="fas fa-star text-success"></i>
+                              <i class="fas fa-star text-success"></i>
+                              <i class="fas fa-star text-success"></i>
+                              <i class="fas fa-star text-success"></i>
+                              <i class="fas fa-star"></i>
+                          </div>
+                          <h4 class="mb-3">3.12 $</h4>
+                          <a href="#" class="btn border border-secondary rounded-pill px-3 text-success" style="font-size: 14px;"><i class="fa fa-shopping-bag me-2 text-success"></i> Add to cart</a>
+                      </div>
+                  </div>
+              </div>
+          </div> <br> <br>
+
+
+          <div class="col-md-6 col-lg-3 col-xl-3">
+              <div class="text-center">
+                  <img src="img/fruite-item-1.jpg" class="img-fluid rounded" alt="">
+                  <div class="py-4">
+                      <a href="#" class="h5 nav-link fs-4 fw-normal">Organic Tomato</a>
+                      <div class="d-flex my-3 justify-content-center">
+                          <i class="fas fa-star text-success"></i>
+                          <i class="fas fa-star text-success"></i>
+                          <i class="fas fa-star text-success"></i>
+                          <i class="fas fa-star text-success"></i>
+                          <i class="fas fa-star"></i>
+                      </div>
+                      <h4 class="mb-3">3.12 $</h4>
+                      <a href="#" class="btn border border-secondary rounded-pill px-3 text-success"><i class="fa fa-shopping-bag me-2 text-success"></i> Add to cart</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-6 col-lg-3 col-xl-3">
+              <div class="text-center">
+                  <img src="img/fruite-item-2.jpg" class="img-fluid rounded" alt="">
+                  <div class="py-4">
+                      <a href="#" class="h5 nav-link fs-4 fw-normal">Organic Tomato</a>
+                      <div class="d-flex my-3 justify-content-center">
+                          <i class="fas fa-star text-success"></i>
+                          <i class="fas fa-star text-success"></i>
+                          <i class="fas fa-star text-success"></i>
+                          <i class="fas fa-star text-success"></i>
+                          <i class="fas fa-star"></i>
+                      </div>
+                      <h4 class="mb-3">3.12 $</h4>
+                      <a href="#" class="btn border border-secondary rounded-pill px-3 text-success"><i class="fa fa-shopping-bag me-2 text-success"></i> Add to cart</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-6 col-lg-3 col-xl-3">
+              <div class="text-center">
+                  <img src="img/fruite-item-3.jpg" class="img-fluid rounded" alt="">
+                  <div class="py-4">
+                      <a href="#" class="h5 nav-link fs-4 fw-normal">Organic Tomato</a>
+                      <div class="d-flex my-3 justify-content-center">
+                          <i class="fas fa-star text-success"></i>
+                          <i class="fas fa-star text-success"></i>
+                          <i class="fas fa-star text-success"></i>
+                          <i class="fas fa-star text-success"></i>
+                          <i class="fas fa-star"></i>
+                      </div>
+                      <h4 class="mb-3">3.12 $</h4>
+                      <a href="#" class="btn border border-secondary rounded-pill px-3 text-success"><i class="fa fa-shopping-bag me-2 text-success"></i> Add to cart</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-6 col-lg-3 col-xl-3">
+              <div class="text-center">
+                  <img src="img/fruite-item-3.jpg" class="img-fluid rounded" alt="">
+                  <div class="py-4">
+                      <a href="#" class="h5 nav-link fs-4 fw-normal">Organic Tomato</a>
+                      <div class="d-flex my-3 justify-content-center">
+                          <i class="fas fa-star text-success"></i>
+                          <i class="fas fa-star text-success"></i>
+                          <i class="fas fa-star text-success"></i>
+                          <i class="fas fa-star text-success"></i>
+                          <i class="fas fa-star"></i>
+                      </div>
+                      <h4 class="mb-3">3.12 $</h4>
+                      <a href="#" class="btn border border-secondary rounded-pill px-3 text-success"><i class="fa fa-shopping-bag me-2 text-success"></i> Add to cart</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="container">
+      <div class="bg-light p-3 rounded">
+          <div class="row g-4 justify-content-center">
+              <div class="col-md-6 col-lg-3 col-xl-3">
+                  <div class="bg-white rounded p-5">
+                      <i class="fa fa-users text-warning" style="font-size: 60px;"></i>
+                      <h4 class="fs-5 text-success mt-4" style="text-transform: uppercase;text-align: center;">satisfied customers</h4>
+                      <h1>1963</h1>
+                  </div>
+              </div>
+              <div class="col-md-6 col-lg-3 col-xl-3">
+                  <div class="bg-white rounded p-5">
+                      <i class="fa fa-users text-warning" style="font-size: 60px;"></i>
+                      <h4 class="fs-5 text-success mt-4" style="text-transform: uppercase; text-align: center;">quality of service</h4>
+                      <h1>99%</h1>
+                  </div>
+              </div>
+              <div class="col-md-6 col-lg-3 col-xl-3">
+                  <div class="bg-white rounded p-5">
+                      <i class="fa fa-users text-warning" style="font-size: 60px;"></i>
+                      <h4 class="fs-5 text-success mt-4" style="text-transform: uppercase; text-align: center;">quality certificates</h4>
+                      <h1>33</h1>
+                  </div>
+              </div>
+              <div class="col-md-6 col-lg-3 col-xl-3">
+                  <div class="counter bg-white rounded p-5">
+                      <i class="fa fa-users text-warning" style="font-size: 60px;"></i>
+                      <h4 class="fs-5 text-success mt-4" style="text-transform: uppercase; text-align: center;">Available Products</h4>
+                      <h1>789</h1>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+<div class="text-center">
+  <h4 class="text-success mt-3">Our Testimonial</h4>
+  <h1 class="display-5 mb-5 text-dark fw-bold">Our Client Saying!</h1>
+</div>
+<div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card text-dark bg-light border-0">
+            <div class="card-body">
+              <i class="fa fa-quote-right fa-2x text-warning position-absolute" style="top: 10px; right: 10px;"></i>
+                <div class="d-flex align-items-center mt-2">
+                <img src="img/testimonial-1.jpg" class="me-3" style="width: 60px; height: 60px; border-radius: 12%;" alt="">
+                <div>
+                  <h5 class="card-title mb-1">Client Name</h5>
+                  <p class="card-subtitle mb-2 text-muted">Profession</p>
+                  <div class="d-flex">
+                    <i class="fas fa-star text-success"></i>
+                    <i class="fas fa-star text-success"></i>
+                    <i class="fas fa-star text-success"></i>
+                    <i class="fas fa-star text-success"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="card-text pb-3 mt-4" style="text-align: justify; border-top: 2px solid orange;">Lorem Ipsum is simply dummy text of the printing Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card text-dark bg-light border-0">
+            <div class="card-body">
+              <i class="fa fa-quote-right fa-2x text-warning position-absolute" style="top: 10px; right: 10px;"></i>
+                <div class="d-flex align-items-center mt-2">
+                <img src="img/testimonial-1.jpg" class="me-3" style="width: 60px; height: 60px; border-radius: 12%;" alt="">
+                <div>
+                  <h5 class="card-title mb-1">Client Name</h5>
+                  <p class="card-subtitle mb-2 text-muted">Profession</p>
+                  <div class="d-flex">
+                    <i class="fas fa-star text-success"></i>
+                    <i class="fas fa-star text-success"></i>
+                    <i class="fas fa-star text-success"></i>
+                    <i class="fas fa-star text-success"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="card-text pb-3 mt-4" style="text-align: justify; border-top: 2px solid orange;">Lorem Ipsum is simply dummy text of the printing Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="carousel-item">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card text-dark bg-light border-0">
+            <div class="card-body">
+              <i class="fa fa-quote-right fa-2x text-warning position-absolute" style="top: 10px; right: 10px;"></i>
+             <div class="d-flex align-items-center mt-4">
+                <img src="img/testimonial-1.jpg" class="rounded-circle me-3" style="width: 60px; height: 60px;" alt="">
+                <div>
+                  <h5 class="card-title mb-1">Client Name</h5>
+                  <p class="card-subtitle mb-2 text-muted">Profession</p>
+                  <div class="d-flex">
+                    <i class="fas fa-star text-success"></i>
+                    <i class="fas fa-star text-success"></i>
+                    <i class="fas fa-star text-success"></i>
+                    <i class="fas fa-star text-success"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="card-text pb-3 mt-4" style="text-align: justify; border-top: 2px solid orange;">Lorem Ipsum is simply dummy text of the printing Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card text-dark bg-light border-0">
+            <div class="card-body">
+              <i class="fa fa-quote-right fa-2x text-warning position-absolute" style="top: 10px; right: 10px;"></i>
+                <div class="d-flex align-items-center mt-4">
+                <img src="img/testimonial-1.jpg" class="rounded-circle me-3" style="width: 60px; height: 60px;" alt="">
+                <div>
+                  <h5 class="card-title mb-1">Client Name</h5>
+                  <p class="card-subtitle mb-2 text-muted">Profession</p>
+                  <div class="d-flex">
+                    <i class="fas fa-star text-success"></i>
+                    <i class="fas fa-star text-success"></i>
+                    <i class="fas fa-star text-success"></i>
+                    <i class="fas fa-star text-success"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="card-text pb-3 mt-4" style="text-align: justify; border-top: 2px solid orange;">Lorem Ipsum is simply dummy text of the printing Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Add more carousel items as needed -->
+    
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+<div class="container-fluid text-white-50 footer pt-1 mt-5" style="background-color: rgb(43, 42, 42);">
+  <div class="container py-5">
+      <div class="pb-4 mb-4" style="border-bottom: 1px solid rgba(226, 175, 24, 0.5) ;">
+          <div class="row g-4">
+              <div class="col-lg-3">
+                  <a href="#">
+                      <h1 class="text-success mb-0" style="float: left;">Fruitables</h1>
+                      <p class="text-warning mb-0" style="float: left;">Fresh products</p>
+                  </a>
+              </div>
+              <div class="col-lg-6">
+                  <div class="position-relative mx-auto">
+                      <input class="form-control border-0 w-100 py-3 px-4 rounded-pill" type="number" placeholder="Your Email">
+                      <button type="submit" class="btn btn-success border-0 border-secondary py-3 px-4 position-absolute rounded-pill text-white" style="top: 0; right: 0;">Subscribe Now</button>
+                  </div>
+              </div>
+              <div class="col-lg-3">
+                  <div class="d-flex justify-content-end pt-3">
+                      <a class="btn btn-outline-warning me-2 btn-md-square rounded-circle" href=""><i class="fab fa-twitter text-white"></i></a>
+                      <a class="btn btn-outline-warning me-2 btn-md-square rounded-circle" href=""><i class="fab fa-facebook-f text-white"></i></a>
+                      <a class="btn btn-outline-warning me-2 btn-md-square rounded-circle" href=""><i class="fab fa-youtube text-white"></i></a>
+                      <a class="btn btn-outline-warning btn-md-square rounded-circle" href=""><i class="fab fa-linkedin-in text-white"></i></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="row g-5">
+          <div class="col-lg-3 col-md-6">
+              <div class="footer-item">
+                  <h4 class="text-light mb-3">Why People Like us!</h4>
+                  <p class="mb-4" style="text-align: left;">typesetting, remaining essentially unchanged. It was 
+                      popularised in the 1960s with the like Aldus PageMaker including of Lorem Ipsum.</p>
+                  <a href="" class="btn border-warning py-2 px-4 rounded-pill text-success">Read More</a>
+              </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+              <div class="d-flex flex-column text-start footer-item">
+                  <h4 class="text-light mb-3">Shop Info</h4>
+                  <a class="btn-link nav-link mt-4" href="">About Us</a>
+                  <a class="btn-link nav-link mt-3" href="">Contact Us</a>
+                  <a class="btn-link nav-link mt-3" href="">Privacy Policy</a>
+                  <a class="btn-link nav-link mt-3" href="">Terms & Condition</a>
+                  <a class="btn-link nav-link mt-3" href="">Return Policy</a>
+                  <a class="btn-link nav-link mt-3" href="">FAQs & Help</a>
+              </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+              <div class="d-flex flex-column text-start footer-item">
+                  <h4 class="text-light mb-3">Account</h4>
+                  <a class="btn-link nav-link mt-4" href="">My Account</a>
+                  <a class="btn-link nav-link mt-3" href="">Shop details</a>
+                  <a class="btn-link nav-link mt-3" href="">Shopping Cart</a>
+                  <a class="btn-link nav-link mt-3" href="">Wishlist</a>
+                  <a class="btn-link nav-link mt-3" href="">Order History</a>
+                  <a class="btn-link nav-link mt-3" href="">International Orders</a>
+              </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+              <div class="footer-item" style="text-align: left;">
+                  <h4 class="text-light mb-3">Contact</h4>
+                  <p>Address: 1429 Netus Rd, NY 48247</p>
+                  <p>Email: Example@gmail.com</p>
+                  <p>Phone: +0123 4567 8910</p>
+                  <p>Payment Accepted</p>
+                  <img src="img/payment.png" class="img-fluid" alt="">
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- Footer End -->
+
+
+        
+       
+          <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
+

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Login Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    
+    
+    <div>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page"><a href="login.html" style="text-decoration: underline;">Login Page</a></li>
+        </ol>
+      </nav>
+    </div>
+
+
+
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card mt-5">
+                    <div class="card-body">
+                        <h3 class="card-title text-center">Login</h3>
+                        <form>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email"
+                                    placeholder="Please enter your email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password" placeholder="Enter password"
+                                    required>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Login</button>
+                        </form>
+                        <div class="text-center mt-3">
+                            <a href="#">Forgot Password?</a> | <a href="registration.html">Create an Account</a>
+                        </div>
+                        <hr>
+                        <div class="text-center">
+                            <p>or login with</p>
+                            <div class="btn-group">
+                                <button class="btn btn-danger"><a
+                                        href="https://accounts.google.com/v3/signin/identifier?authuser=0&continue=https%3A%2F%2Fmyaccount.google.com%2F%3Futm_source%3Dsign_in_no_continue%26pli%3D1&ec=GAlAwAE&hl=en_GB&service=accountsettings&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S-1609220463%3A1722562316215957&ddm=0" class="text-white"><i
+                                            class="fab fa-google"></i></a> </button>
+                                <button class="btn btn-primary"><a href="https://www.facebook.com/login/" class="text-white"><i class="fab fa-facebook-f"></i></a> </button>
+                                <button class="btn btn-info"><a href="https://x.com/" class="text-white"><i class="fab fa-twitter"></i></a> </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
